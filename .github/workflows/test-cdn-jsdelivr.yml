@@ -57,7 +57,7 @@ jobs:
             echo "Playwright tests failed due to a non-snapshot issue."
             exit 1
           fi
-      - uses: actions/upload-artifact@184d73b71b93c222403b2e7f1ffebe4508014249
+      - uses: actions/upload-artifact@2848b2cda0e5190984587ec6bb1f36730ca78d50
         id: artifact-upload
         if: ${{ failure() && env.SNAPSHOT_DIFFERENCES == 'true' }}
         with:
